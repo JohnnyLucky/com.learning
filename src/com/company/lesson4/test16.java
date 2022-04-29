@@ -13,92 +13,92 @@ public class test16 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Сколько денег у вас осталось до зарплаты?");
+        System.out.println("РЎРєРѕР»СЊРєРѕ РґРµРЅРµРі Сѓ РІР°СЃ РѕСЃС‚Р°Р»РѕСЃСЊ РґРѕ Р·Р°СЂРїР»Р°С‚С‹?");
         double moneyBeforeSalary = scanner.nextDouble();
 
-        System.out.println("Сколько дней до зарплаты?");
+        System.out.println("РЎРєРѕР»СЊРєРѕ РґРЅРµР№ РґРѕ Р·Р°СЂРїР»Р°С‚С‹?");
         int daysBeforeSalary = scanner.nextInt();
 
         while (true) {
-            System.out.println("Что вы хотите сделать?");
-            System.out.println("1 - Конвертировать валюту");
-            System.out.println("2 - Получить совет");
-            System.out.println("3 - Ввести трату");
-            System.out.println("4 - Показать траты за неделю");
-            // Допишите вывод нового пункта меню
+            System.out.println("Р§С‚Рѕ РІС‹ С…РѕС‚РёС‚Рµ СЃРґРµР»Р°С‚СЊ?");
+            System.out.println("1 - РљРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ РІР°Р»СЋС‚Сѓ");
+            System.out.println("2 - РџРѕР»СѓС‡РёС‚СЊ СЃРѕРІРµС‚");
+            System.out.println("3 - Р’РІРµСЃС‚Рё С‚СЂР°С‚Сѓ");
+            System.out.println("4 - РџРѕРєР°Р·Р°С‚СЊ С‚СЂР°С‚С‹ Р·Р° РЅРµРґРµР»СЋ");
+            // Р”РѕРїРёС€РёС‚Рµ РІС‹РІРѕРґ РЅРѕРІРѕРіРѕ РїСѓРЅРєС‚Р° РјРµРЅСЋ
 
-            System.out.println("5 — Показать самую большую сумму расходов за неделю");
+            System.out.println("5 вЂ” РџРѕРєР°Р·Р°С‚СЊ СЃР°РјСѓСЋ Р±РѕР»СЊС€СѓСЋ СЃСѓРјРјСѓ СЂР°СЃС…РѕРґРѕРІ Р·Р° РЅРµРґРµР»СЋ");
 
             int command = scanner.nextInt();
 
             if (command == 1) {
-                System.out.println("Ваши сбережения: " + moneyBeforeSalary + " RUB");
-                System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - USD, 2 - EUR, 3 - JPY.");
+                System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ: " + moneyBeforeSalary + " RUB");
+                System.out.println("Р’ РєР°РєСѓСЋ РІР°Р»СЋС‚Сѓ С…РѕС‚РёС‚Рµ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ? Р”РѕСЃС‚СѓРїРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹: 1 - USD, 2 - EUR, 3 - JPY.");
                 int currency = scanner.nextInt();
                 if (currency == 1) {
-                    System.out.println("Ваши сбережения в долларах: " + moneyBeforeSalary / rateUSD);
+                    System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ РІ РґРѕР»Р»Р°СЂР°С…: " + moneyBeforeSalary / rateUSD);
                 } else if (currency == 2) {
-                    System.out.println("Ваши сбережения в евро: " + moneyBeforeSalary / rateEUR);
+                    System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ РІ РµРІСЂРѕ: " + moneyBeforeSalary / rateEUR);
                 } else if (currency == 3) {
-                    System.out.println("Ваши сбережения в иенах: " + moneyBeforeSalary / rateJPY);
+                    System.out.println("Р’Р°С€Рё СЃР±РµСЂРµР¶РµРЅРёСЏ РІ РёРµРЅР°С…: " + moneyBeforeSalary / rateJPY);
                 } else {
-                    System.out.println("Неизвестная валюта");
+                    System.out.println("РќРµРёР·РІРµСЃС‚РЅР°СЏ РІР°Р»СЋС‚Р°");
                 }
             } else if (command == 2) {
                 if (moneyBeforeSalary < 3000) {
-                    System.out.println("Сегодня лучше поесть дома. Экономьте, и вы дотянете до зарплаты!");
+                    System.out.println("РЎРµРіРѕРґРЅСЏ Р»СѓС‡С€Рµ РїРѕРµСЃС‚СЊ РґРѕРјР°. Р­РєРѕРЅРѕРјСЊС‚Рµ, Рё РІС‹ РґРѕС‚СЏРЅРµС‚Рµ РґРѕ Р·Р°СЂРїР»Р°С‚С‹!");
                 } else if (moneyBeforeSalary < 10000) {
                     if (daysBeforeSalary < 10) {
-                        System.out.println("Окей, пора в Макдак!");
+                        System.out.println("РћРєРµР№, РїРѕСЂР° РІ РњР°РєРґР°Рє!");
                     } else {
-                        System.out.println("Сегодня лучше поесть дома. Экономьте, и вы дотянете до зарплаты!");
+                        System.out.println("РЎРµРіРѕРґРЅСЏ Р»СѓС‡С€Рµ РїРѕРµСЃС‚СЊ РґРѕРјР°. Р­РєРѕРЅРѕРјСЊС‚Рµ, Рё РІС‹ РґРѕС‚СЏРЅРµС‚Рµ РґРѕ Р·Р°СЂРїР»Р°С‚С‹!");
                     }
                 } else if (moneyBeforeSalary < 30000) {
                     if (daysBeforeSalary < 10) {
-                        System.out.println("Неплохо! Прикупите долларов и зайдите поужинать в классное место. :)");
+                        System.out.println("РќРµРїР»РѕС…Рѕ! РџСЂРёРєСѓРїРёС‚Рµ РґРѕР»Р»Р°СЂРѕРІ Рё Р·Р°Р№РґРёС‚Рµ РїРѕСѓР¶РёРЅР°С‚СЊ РІ РєР»Р°СЃСЃРЅРѕРµ РјРµСЃС‚Рѕ. :)");
                     } else {
-                        System.out.println("Окей, пора в Макдак!");
+                        System.out.println("РћРєРµР№, РїРѕСЂР° РІ РњР°РєРґР°Рє!");
                     }
                 } else {
                     if (daysBeforeSalary < 10) {
-                        System.out.println("Отлично! Заказывайте крабов!");
+                        System.out.println("РћС‚Р»РёС‡РЅРѕ! Р—Р°РєР°Р·С‹РІР°Р№С‚Рµ РєСЂР°Р±РѕРІ!");
                     } else {
-                        System.out.println("Неплохо! Прикупите долларов и зайдите поужинать в классное место. :)");
+                        System.out.println("РќРµРїР»РѕС…Рѕ! РџСЂРёРєСѓРїРёС‚Рµ РґРѕР»Р»Р°СЂРѕРІ Рё Р·Р°Р№РґРёС‚Рµ РїРѕСѓР¶РёРЅР°С‚СЊ РІ РєР»Р°СЃСЃРЅРѕРµ РјРµСЃС‚Рѕ. :)");
                     }
                 }
             } else if (command == 3) {
-                System.out.println("За какой день вы хотите ввести трату: 1-ПН, 2-ВТ, 3-СР, 4-ЧТ, 5-ПТ, 6-СБ, 7-ВС?");
+                System.out.println("Р—Р° РєР°РєРѕР№ РґРµРЅСЊ РІС‹ С…РѕС‚РёС‚Рµ РІРІРµСЃС‚Рё С‚СЂР°С‚Сѓ: 1-РџРќ, 2-Р’Рў, 3-РЎР , 4-Р§Рў, 5-РџРў, 6-РЎР‘, 7-Р’РЎ?");
                 int day = scanner.nextInt();
-                System.out.println("Введите размер траты:");
+                System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ С‚СЂР°С‚С‹:");
                 double expense = scanner.nextDouble();
                 moneyBeforeSalary = moneyBeforeSalary - expense;
                 expenses[day - 1] = expenses[day - 1] + expense;
-                System.out.println("Значение сохранено! Ваш текущий баланс в рублях: " + moneyBeforeSalary);
+                System.out.println("Р—РЅР°С‡РµРЅРёРµ СЃРѕС…СЂР°РЅРµРЅРѕ! Р’Р°С€ С‚РµРєСѓС‰РёР№ Р±Р°Р»Р°РЅСЃ РІ СЂСѓР±Р»СЏС…: " + moneyBeforeSalary);
                 if (moneyBeforeSalary < 1000) {
-                    System.out.println("На вашем счету осталось совсем немного. Стоит начать экономить!");
+                    System.out.println("РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ РѕСЃС‚Р°Р»РѕСЃСЊ СЃРѕРІСЃРµРј РЅРµРјРЅРѕРіРѕ. РЎС‚РѕРёС‚ РЅР°С‡Р°С‚СЊ СЌРєРѕРЅРѕРјРёС‚СЊ!");
                 }
             } else if (command == 4) {
                 for (int i = 0; i < expenses.length; i++) {
-                    System.out.println("День " + (i + 1) + ". Потрачено " + expenses[i] + " рублей");
+                    System.out.println("Р”РµРЅСЊ " + (i + 1) + ". РџРѕС‚СЂР°С‡РµРЅРѕ " + expenses[i] + " СЂСѓР±Р»РµР№");
                 }
-            } else if (command == 5) { // Добавьте условие в ветвление для обработки новой команды
-                /* Объявляем переменную maxExpense для хранения самой большой суммы расходов.
-                   Сначала её значение неизвестно, поэтому равно нулю */
+            } else if (command == 5) { // Р”РѕР±Р°РІСЊС‚Рµ СѓСЃР»РѕРІРёРµ РІ РІРµС‚РІР»РµРЅРёРµ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё РЅРѕРІРѕР№ РєРѕРјР°РЅРґС‹
+                /* РћР±СЉСЏРІР»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ maxExpense РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЃР°РјРѕР№ Р±РѕР»СЊС€РѕР№ СЃСѓРјРјС‹ СЂР°СЃС…РѕРґРѕРІ.
+                   РЎРЅР°С‡Р°Р»Р° РµС‘ Р·РЅР°С‡РµРЅРёРµ РЅРµРёР·РІРµСЃС‚РЅРѕ, РїРѕСЌС‚РѕРјСѓ СЂР°РІРЅРѕ РЅСѓР»СЋ */
                 double maxExpense = 0;
-                for (int i = 0; i < expenses.length; i++) { // Проходим циклом по всему массиву трат
-                    if (maxExpense < expenses[i]) // Сравниваем, больше ли текущий элемент массива значения maxExpense
-                        // Если условие верно, то записываем в maxExpense значение текущего элемента массива
+                for (int i = 0; i < expenses.length; i++) { // РџСЂРѕС…РѕРґРёРј С†РёРєР»РѕРј РїРѕ РІСЃРµРјСѓ РјР°СЃСЃРёРІСѓ С‚СЂР°С‚
+                    if (maxExpense < expenses[i]) // РЎСЂР°РІРЅРёРІР°РµРј, Р±РѕР»СЊС€Рµ Р»Рё С‚РµРєСѓС‰РёР№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° Р·РЅР°С‡РµРЅРёСЏ maxExpense
+                        // Р•СЃР»Рё СѓСЃР»РѕРІРёРµ РІРµСЂРЅРѕ, С‚Рѕ Р·Р°РїРёСЃС‹РІР°РµРј РІ maxExpense Р·РЅР°С‡РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР°
                         maxExpense = expenses[i];
 
                 }
-                // Печатаем максимум расходов:
-                System.out.println("Самая большая сумма расходов на этой неделе составила " + maxExpense + " руб.");
+                // РџРµС‡Р°С‚Р°РµРј РјР°РєСЃРёРјСѓРј СЂР°СЃС…РѕРґРѕРІ:
+                System.out.println("РЎР°РјР°СЏ Р±РѕР»СЊС€Р°СЏ СЃСѓРјРјР° СЂР°СЃС…РѕРґРѕРІ РЅР° СЌС‚РѕР№ РЅРµРґРµР»Рµ СЃРѕСЃС‚Р°РІРёР»Р° " + maxExpense + " СЂСѓР±.");
 
             } else if (command == 0) {
-                System.out.println("Выход");
+                System.out.println("Р’С‹С…РѕРґ");
                 break;
             } else {
-                System.out.println("Извините, такой команды пока нет.");
+                System.out.println("РР·РІРёРЅРёС‚Рµ, С‚Р°РєРѕР№ РєРѕРјР°РЅРґС‹ РїРѕРєР° РЅРµС‚.");
             }
         }
     }
