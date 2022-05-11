@@ -1,7 +1,7 @@
 package com.company.java;
 
 import java.util.Scanner;
-                                 // Функции
+                                 /** Функции */
 
 
 public class lesson5 {
@@ -22,3 +22,5 @@ public class lesson5 {
        //  }
     }
 }
+
+

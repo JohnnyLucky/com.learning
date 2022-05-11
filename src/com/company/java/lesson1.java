@@ -3,7 +3,7 @@ package com.company.java;
 public class lesson1 {
     public static void main(String[] args) {
 
-        // Примитивные типы данных хранятся в STACK памяти.
+        /**Примитивные типы данных хранятся в STACK памяти.*/
 
         // Целые числа.
         byte a;       // 1 байт  (2 в 8)   128 + 127
@@ -21,7 +21,7 @@ public class lesson1 {
         // Логические.
         boolean h;    // 1 (в массивах), 32 (не в массивах используется int) true или false
 
-        // Ссылочные типы данных хранятся в STACK памяти, а их объекты в HEAP памяти и являются классами.
+        /** Ссылочные типы данных хранятся в STACK памяти, а их объекты в HEAP памяти и являются классами.*/
 
         // Строки.
         String i; // "значение1" + "значение2" конкатенация.  " " пробел.
@@ -34,11 +34,11 @@ public class lesson1 {
 
         // Обертки.
         // Если требуется создать ссылку на один из примитивных типов данных, необходимо использовать соответствующий класс-обертку.
-        /* byte    (Byte)
+        /* byte     (Byte)
            short	(Short)
            int	    (Integer)
-           long	(Long)
-           char	(Character)
+           long	    (Long)
+           char	    (Character)
            float	(Float)
            double	(Double)
            boolean	(Boolean)
